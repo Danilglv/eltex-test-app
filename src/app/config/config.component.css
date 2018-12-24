@@ -1,0 +1,39 @@
+li {
+	list-style: none;
+}
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Oswald', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+
+.container {
+	padding-top: 20px;
+	width: 500px;
+	height: 100%;
+	margin: 0 auto;
+	background: #D2FFFF;
+}
+.validate {
+	float: left;
+	width: 40%;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+	outline: none;
+}
+.label {
+	display: block;
+	width: 30%;
+	float: left;
+	margin-top: 5px;
+}
+fieldset {
+	border: 1px solid #cecece;
+	border-radius: 5px;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <form class="col s12">
+      <div class="row" [formGroup]="listControls">
+        <fieldset formArrayName="setting">
+          <label class="label" for="ssid">SSID</label>
+          <input id="ssid" class="validate" type="text" formControlName="0">
+          <br>
+          <label class="label" for="ChannelBonding">Channel Bonding</label>
+          <input id="ChannelBonding" class="validate" type="text" formControlName="1">
+          <br>
+          <label class="label" for="WPAKey">WPA Key</label>
+          <input id="WPAKey" class="validate" type="text" formControlName="2">
+          <br>
+          <label class="label" for="ExtendedChannel">Extended Channel</label>
+          <input id="ExtendedChannel" class="validate" type="text" formControlName="3">
+          <br>
+          <label class="label" for="UseChannelLimit">Use Channel Limit</label>
+          <input id="UseChannelLimit" class="validate" type="text" formControlName="4">
+          <br>
+          <label class="label" for="ChannelLimit">Channel Limit</label>
+          <input id="ChannelLimit" class="validate" type="text" formControlName="5">
+        </fieldset>
+      </div>
+    </form>
+
+  </div>
+</div>

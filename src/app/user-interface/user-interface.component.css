@@ -1,0 +1,69 @@
+.container {
+  padding-top: 20px;
+}
+input.ng-touched.ng-invalid{
+  border-color: red;
+}
+form {
+	width: 500px;
+	margin: 0 auto;
+}
+fieldset {
+  width: 450px;
+}
+.validate {
+	width: 300px;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 8px;
+	outline: none;
+}
+.validate:focus {
+	border: 2px solid #0ecece;
+}
+.active {
+	display: inline-block;
+	padding: 20px;
+}
+.ChannelLimit {
+  display: block;
+  width: 160px;
+  height: 150px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+
+.error {
+	color: red;
+	font-size: 15px;
+	text-align: center;
+}
+.submit {
+  display: block;
+  width: 10em;
+  height: 2.5em;
+  margin: 0 auto;
+  line-height: 2.5em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #777;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #F64C2B;
+  border-radius: 5px;
+  box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
+  background: linear-gradient(#FB9575, #F45A38 48%, #EA1502 52%, #F02F17);
+  margin-top: 20px;
+}
+.submit:hover {
+	opacity: 0.9;
+}
+.submit:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}

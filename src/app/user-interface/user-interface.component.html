@@ -1,0 +1,58 @@
+<div class="container">
+	<form class="col s12" [formGroup]="form">
+		<div class="input-field">
+	        <label class="active" for="SSID">SSID</label>
+	        <input placeholder="Введите SSID..." id="SSID" type="text" class="validate" formControlName="ssid">
+	    </div>
+	    <div class="error" *ngIf="isControlInvalid('ssid')">
+			<p>Поле не может быть пустым</p>
+		</div>
+		<div class="input-field">
+			<label class="active">Ширина канала</label>
+			    <select formControlName="ChannelBonding" class="validate">
+			      <option value="Выберите ширину" disabled selected>Выберите ширину</option>
+			      <option value="5">5 МГц</option>
+			      <option value="10">10 МГц</option>
+			      <option value="20">20 МГц</option>
+			      <option value="40">40 МГц</option>
+			      <option value="80">80 МГц</option>
+			    </select>
+		</div>
+		<div class="input-field">
+	        <label class="active" for="password">Пароль</label>
+	        <input placeholder="Введите пароль..." id="password" type="password" class="validate" formControlName="password"> 
+	    </div>
+	    <div class="error" *ngIf="isControlInvalid('password')">
+			<p>Пароль должен быть не менее 8 символов и не более 63 символов</p>
+		</div>
+		<div class="input-field" *ngIf="displayExtendedChannel">
+	        <label class="active" for="ExtendedChannel">Расширенные каналы</label>
+	        <input id="ExtendedChannel" type="checkbox" class="checkbox" formControlName="ExtendedChannel" (change)="checkCondition()"> 
+	    </div>
+	    <div class="input-field">
+	        <label class="active" for="UseChannelLimit">Использование списка разрешённых каналов</label>
+	        <input id="UseChannelLimit" type="checkbox" class="checkbox" formControlName="UseChannelLimit"> 
+	    </div>
+	    <div class="input-field" *ngIf="displayChannelLimit">
+			<p>Список разрешённых каналов</p>
+			<fieldset>
+				<label class="active" *ngFor="let channel of ChannelRanges[rangeNumber]; let i = index" for="{{i}}">{{ channel }}
+				<input type="checkbox" class="checkbox"  id="{{ i }}" formControlName="ChannelLimit" value="{{ channel }}">
+				</label>
+			</fieldset>
+		</div>
+		<input type="submit" value="Применить" formControlName="submit" class="submit" (click)="onClick()">
+	    <!-- <div>
+	        <p>form.value.Channel Bonding: {{ form.value.ChannelBonding }}</p>
+	        <p>this.displayExtendedChannel: {{ this.displayExtendedChannel }}</p>
+	        <p>this.displayChannelLimit: {{ this.displayChannelLimit }}</p>
+	        <p>this.ChannelRanges[0]: {{ this.ChannelRanges[0] }}</p>
+	        <p>this.ChannelRanges[1]: {{ this.ChannelRanges[1] }}</p>
+	        <p>this.ChannelRanges[2]: {{ this.ChannelRanges[2] }}</p>
+	        <p>this.ChannelRanges[3]: {{ this.ChannelRanges[3] }}</p>
+	        <p>this.rangeNumber: {{ this.rangeNumber }}</p>
+	        <p>{{ form.value | json }}</p>
+	    </div> -->
+	</form>
+</div>
+

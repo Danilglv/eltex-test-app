@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <nav class="nav">
+          <a class="logo" routerLink="/">WB-2P-LR5</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a class="nav-link" routerLink="/">Настройка данных</a></li>
+            <li><a class="nav-link" routerLink="config">Конфигурация</a></li>
+          </ul>
+      </nav>  
+    </header>
+  </div>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</body>
+</html>
